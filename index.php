@@ -1,4 +1,22 @@
-<?php  ob_start(); ?>
+<?php  ob_start();
+
+abstract class Mere {
+
+    //Abstract permt de limiter la creation et permettre d'hériter la class Mere 
+    //on mettant $nom en commenataire on peut quand même faire l'heritage de la classe 
+    // Class Mere 
+    public $bdd ="connexion"; 
+}
+
+class Fille extends Mere{}
+
+//$nom = new Mere(); 
+$fille = new Fille(); 
+
+echo $fille-> bdd; 
+
+?>
+
 
 
 <p>Bienvenue sur notre store !</p>

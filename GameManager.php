@@ -12,3 +12,10 @@ class GameManager
         return $this->games;
     }
 }
+
+
+/**
+ * Gestion de l’entité
+game et des games
+dans notre app
+ */
