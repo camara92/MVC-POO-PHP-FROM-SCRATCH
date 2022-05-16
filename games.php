@@ -1,5 +1,6 @@
 <?php 
     require_once ("Game.php"); 
+    require_once ("GameManager.php"); 
 
     $game1= new Game(1, "Jump for Wars 3", 10); 
     $game2= new Game(2, "Tarkov", 10); 
@@ -7,8 +8,15 @@
     $game4= new Game(4, "Pokemon ", 25); 
     $game5= new Game(4, "Moblizy ", 100); 
 
-$games = [$game1, $game2, $game3, $game4, $game5]; 
+//$games = [$game1, $game2, $game3, $game4, $game5]; 
+$gameManager = new GameManager(); 
+$gameManager->addGame($game1);
+$gameManager->addGame($game2);
+$gameManager->addGame($game3);
+$gameManager->addGame($game4);
+$gameManager->addGame($game5);
 
+$games = $gameManager->getGames(); 
 
 ob_start(); ?>
 
