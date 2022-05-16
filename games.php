@@ -1,18 +1,8 @@
 
-
-?>
-
-
-<?php ob_start() ?>
-
-<p> Games notre selection</p>
-
 <?php
-
-
-$title = "liste des jeux  ";
-$content = ob_get_clean();
-require_once "base.html.php";
+    $content = "Games  - Notre sélection "; 
+    $title = "Liste de jeux  "; 
+    require_once "base.html.php"; 
 ?>
 
 <table class="container table table-hover text-center border">
