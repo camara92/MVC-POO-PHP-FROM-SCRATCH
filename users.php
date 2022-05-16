@@ -1,14 +1,14 @@
 <?php
 // require_once("Game.php");
-require_once("GameManager.php");
-// require_once("UserManager.php");
-$gameManager = new GameManager();
+
+require_once("UserManager.php");
+
 //user 
+$userManager = new UserManager();
 
-$gameManager->loadGames();
+$userManager->loadUser();
 
-$games = $gameManager->getGames();
-
+$users = $userManager->getUser();
 
 // $game1 = new Game(1, "Jump for Wars 3", 10);
 // $game2 = new Game(2, "Tarkov", 10);
@@ -24,10 +24,8 @@ $games = $gameManager->getGames();
 // $gameManager->addGame($game4);
 // $gameManager->addGame($game5);
 
-$games = $gameManager->getGames();
 
-$gameManager->loadGames();
-
+$userManager->loadUser();
 
 
 ob_start(); ?>
@@ -36,34 +34,17 @@ ob_start(); ?>
   <thead class="bg-primary text-white">
 
     <tr>
-      <th scope="col">Titre</th>
-      <th scope="col">Nombres de joueurs</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Age</th>
       <th scope="col" colspan="2">Actions</th>
     </tr>
   </thead>
   <tbody>
-    <!-- <tr>
-      <td>Starcraft 2</td>
-      <td>8</td>
-      <td><a href=""><i class="fa-solid fa-edit"></i></a></td>
-      <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
-    </tr>
-    <tr>
-      <td>Valorant</td>
-      <td>10</td>
-      <td><a href=""><i class="fa-solid fa-edit"></i></a></td>
-      <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
-    </tr>
-    <tr>
-      <td>Among US</td>
-      <td>15</td>
-      <td><a href=""><i class="fa-solid fa-edit"></i></a></td>
-      <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
-    </tr> -->
-    <?php foreach ($games as $game) : ?>
+ 
+    <?php foreach ($users as $user) : ?>
       <tr>
-        <td><?= $game->getTitle() ?></td>
-        <td><?= $game->getNbplayers() ?></td>
+        <td><?= $user->getName() ?></td>
+        <td><?= $user->getAge() ?></td>
         <td><a href=""><i class="fa-solid fa-edit"></i></a></td>
         <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
 
@@ -80,8 +61,7 @@ ob_start(); ?>
 <?php
 
 $content = ob_get_clean();
-$title = "Liste de jeux";
+$title = "Liste de joueurs ";
 require_once "base.html.php";
 
 ?>
-

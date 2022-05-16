@@ -1,0 +1,24 @@
+<!--users -->
+<h1>Joeurs </h1>
+<div class="table  table-hover text-center shadow">
+  <div class="bg-primary text-white">
+
+    <ul>
+      <li scope="col">Nom</li>
+      <li scope="col">Age</li>
+      <li scope="col" colspan="2">Actions</li>
+    </ul>
+    </div>
+  <div>
+  <?php foreach ($users as $user) : ?>
+      <ul>
+        <li><?= $user->getName() ?></li>
+        <li><?= $user->getAge() ?></li>
+        <li><a href=""><i class="fa-solid fa-edit"></i></a></li>
+        <li><a href=""><i class="fa-solid fa-trash"></i></a></li>
+
+  </ul>
+    <?php endforeach; ?>
+  </div>
+
+</div>

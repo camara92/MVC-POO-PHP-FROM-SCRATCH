@@ -25,11 +25,23 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="games.php">Jeux</a>
+
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="users.php">Joueurs </a>
+
+                </li>
+               
+
+               
             </ul>
         </div>
     </nav>
+    <?php
+    
 
+    
+    ?>
     <div class="container">
 
         <h1 class="my-4 shadow text-center text-white bold  bg-dark p-2">
