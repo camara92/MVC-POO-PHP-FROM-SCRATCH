@@ -1,5 +1,6 @@
 <?php
      require_once "Manager.php";
+     require_once "Game.php";
      class GameManager extends Manager {
 
         private $games;
@@ -19,7 +20,7 @@
             $req->closeCursor(); 
 
             foreach($myGames as $game){
-                
+
                 $g= new Game($game['id'], $game["title"], $game['nbplayers']); 
                 $this->addGame($g); 
             }
