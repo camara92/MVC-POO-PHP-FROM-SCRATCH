@@ -44,7 +44,7 @@
     ?>
     <div class="container">
 
-        <h1 class="my-4 shadow text-center text-white bold  bg-dark p-2">
+        <h1 class="my-4 shadow text-center text-danger bold  bg-dark p-2">
             <?= $title ?>
         </h1>
 
