@@ -35,6 +35,7 @@ ob_start(); ?>
 
     <tr>
       <th scope="col">Nom</th>
+      <th scope="col">Adresse mail </th>
       <th scope="col">Age</th>
       <th scope="col" colspan="2">Actions</th>
     </tr>
@@ -44,6 +45,7 @@ ob_start(); ?>
     <?php foreach ($users as $user) : ?>
       <tr>
         <td><?= $user->getName() ?></td>
+        <td><?= $user->getEmail() ?></td>
         <td><?= $user->getAge() ?></td>
         <td><a href=""><i class="fa-solid fa-edit"></i></a></td>
         <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
@@ -56,12 +58,12 @@ ob_start(); ?>
 </table>
 
 
-<a class="btn btn-success w-25 d-block m-auto" href="">Ajouter un jeu</a>
+<a class="btn btn-success w-25 d-block m-auto" href="">Ajouter un utilisateur</a>
 
 <?php
 
 $content = ob_get_clean();
-$title = "Liste de joueurs ";
+$title = "Nos utilisateurs  ";
 require_once "base.html.php";
 
 ?>

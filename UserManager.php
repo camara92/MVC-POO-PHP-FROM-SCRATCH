@@ -21,7 +21,7 @@
 
             foreach($users as $user){
 
-                $u= new User($user['id'], $user["name"], $user['age']); 
+                $u= new User($user['id'], $user["name"], $user['email'],$user['age']); 
                 $this->addUser($u); 
             }
     
