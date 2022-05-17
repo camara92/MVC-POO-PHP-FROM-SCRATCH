@@ -1,7 +1,7 @@
 <?php
 // require_once("Game.php");
 
-require_once("UserManager.php");
+require_once("modele/UserManager.php");
 
 //user 
 $userManager = new UserManager();
