@@ -20,6 +20,7 @@ class GameController {
     public function newGameValidation(){
         // require_once "view/new.game.view.php";
         echo 'Daouda'; 
+        //var_dump($_POST);
     }
 
 
