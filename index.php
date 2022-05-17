@@ -30,7 +30,13 @@ if (empty($_GET['page'])) {
              } elseif ($url[1]==="add") {
                     $gameController->newGameForm();
                 
-            } elseif (($url[1] === "add")) {
+            }
+            elseif ($url[1]==="gvalid") {
+                $gameController->newGameValidation();
+            
+        }
+            
+            elseif (($url[1] === "add")) {
                 echo "Créer un jeu";
             } elseif (($url[1] === "edit")) {
                 echo "Modifier un jeu";

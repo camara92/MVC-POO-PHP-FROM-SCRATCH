@@ -17,6 +17,10 @@ class GameController {
     public function newGameForm(){
         require_once "view/new.game.view.php";
     }
+    public function newGameValidation(){
+        // require_once "view/new.game.view.php";
+        echo 'Daouda'; 
+    }
 
 
 }
