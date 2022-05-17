@@ -25,7 +25,11 @@
 
 
 
-ob_start(); ?>
+ob_start();
+//var_dump($_SERVER);
+//php str_replace : mot à chercher , mot a remplacer et dans la phrase où chercher 
+
+?>
 
 <table class="table  table-hover text-center shadow">
   <thead class="bg-primary text-white">

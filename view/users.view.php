@@ -1,6 +1,7 @@
 <?php
 // require_once("Game.php");
 
+
 require_once("modele/UserManager.php");
 
 //user 
@@ -28,7 +29,9 @@ $users = $userManager->getUser();
 $userManager->loadUser();
 
 
-ob_start(); ?>
+ob_start(); 
+//var_dump($_SERVER);
+?>
 
 <table class="table  table-hover text-center shadow">
   <thead class="bg-primary text-white">
