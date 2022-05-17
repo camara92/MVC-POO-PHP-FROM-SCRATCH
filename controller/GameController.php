@@ -22,6 +22,7 @@ class GameController {
        // echo 'Daouda'; 
         //var_dump($_POST);
         $this->gameManager->newGameDB($_POST['title'], $_POST['nbplayers']); 
+        header('Location :'. URL ."games");
     }
 
 

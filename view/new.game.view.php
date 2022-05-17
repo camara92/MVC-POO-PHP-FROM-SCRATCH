@@ -2,7 +2,7 @@
 
 
 
-<p>Formualire ajout game </p>
+<p>Formualire ajout de jeu  </p>
 
 <form method="POST" action="<?= URL ?>games/gvalid">
   <div class="form-group">
@@ -10,8 +10,8 @@
     <input type="text" name="title" class="form-control" id="title">
   </div>
   <div class="form-group">
-    <label for="nbPlayers">Nombres de joueurs</label>
-    <input type="text" name="nbPlayers" class="form-control" id="nbPlayers">
+    <label for="nbplayers">Nombres de joueurs</label>
+    <input type="number" name="nbplayers" class="form-control" id="nbplayers">
   </div>
   <button class="btn btn-success" type="submit">Ajouter un jeu</button>
 </form>

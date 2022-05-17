@@ -32,7 +32,18 @@
 
 
         public function newGameDB($title, $nbplayers){
-            
+            $req = "INSERT INTO games (title, nbplayers) VALUES  (:title, :nbplayers)";
+            $stat = $this->getBdd()->prepare($req);
+            $stat->bindValue(":title", $title, PDO::PARAM_STR);
+            $stat->bindValue(":nbplayers", $nbplayers, PDO::PARAM_INT);
+            $result= $stat->execute(); 
+            $stat->closeCursor(); 
+
+            if($result){
+                $game= new Game($this->getBdd()->lastInsertId(), $title, $nbplayers); 
+                $this->addGame($game); 
+
+            }
         }
     
     
