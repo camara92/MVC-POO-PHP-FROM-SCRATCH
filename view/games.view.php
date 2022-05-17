@@ -63,8 +63,8 @@ ob_start();
       <tr>
         <td><?= $game->getTitle() ?></td>
         <td><?= $game->getNbplayers() ?></td>
-        <td><a href=""><i class="fa-solid fa-edit"></i></a></td>
-        <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
+        <td><a href="<?=URL ?>games/edit"><i class="fa-solid fa-edit"></i></a></td>
+        <td><a href="<?=URL ?>games/delete"><i class="fa-solid fa-trash"></i></a></td>
 
       </tr>
     <?php endforeach; ?>
@@ -74,7 +74,7 @@ ob_start();
 </table>
 
 
-<a class="btn btn-success w-25 d-block m-auto" href="">Ajouter un jeu</a>
+<a class="btn btn-success w-25 d-block m-auto" href="<?= URL ?>games/add">Ajouter un jeu</a>
 
 <?php
 

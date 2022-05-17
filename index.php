@@ -14,6 +14,7 @@ if (empty($_GET['page'])) {
     $url = explode("/", filter_var($_GET['page'], FILTER_SANITIZE_URL));
     // var_dump($url); 
 
+// switch($_get['page']);on l'a remplacé par la variable $url puis nos conditions de routages dynamiques 
 
     switch ($url[0]) {
         case 'accueil':
@@ -22,11 +23,11 @@ if (empty($_GET['page'])) {
         case 'games':
             if (empty($url[1])) {
                 $gameController->displayGames();
-            } elseif (empty($url[1] === "add")) {
+            } elseif (($url[1] === "add")) {
                 echo "Créer un jeu";
-            } elseif (empty($url[1] === "edit")) {
-                echo "CModifier un jeu";
-            } elseif (empty($url[1] === "delete")) {
+            } elseif (($url[1] === "edit")) {
+                echo "Modifier un jeu";
+            } elseif (($url[1] === "delete")) {
                 echo "Supprimer un jeu";
             }
             break;
