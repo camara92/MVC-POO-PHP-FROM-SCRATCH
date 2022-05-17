@@ -37,4 +37,13 @@ $content =ob_get_clean();
 $title = "Bienvenue chez Game-X";
 require_once "base.html.php";
 
+
+
+
+// $phrase = "Test c'est génial ";
+// echo $phrase; 
+// $exploz = explode(" ");
+
+
+// var_dump($exploz); 
 ?>
