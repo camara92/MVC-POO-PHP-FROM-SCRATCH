@@ -17,7 +17,7 @@ $users = $userManager->getUser();
 // $game4 = new Game(4, "Pokemon ", 25);
 // $game5 = new Game(4, "Moblizy ", 100);
 
-//$games = [$game1, $game2, $game3, $game4, $game5]; 
+//$users = [$game1, $game2, $game3, $game4, $game5]; 
 // $gameManager = new GameManager();
 // $gameManager->addGame($game1);
 // $gameManager->addGame($game2);
@@ -50,8 +50,10 @@ ob_start();
         <td><?= $user->getName() ?></td>
         <td><?= $user->getEmail() ?></td>
         <td><?= $user->getAge() ?></td>
-        <td><a href=""><i class="fa-solid fa-edit"></i></a></td>
-        <td><a href=""><i class="fa-solid fa-trash"></i></a></td>
+        <!-- <td><a href=""><i class="fa-solid fa-edit"></i></a></td>
+        <td><a href=""><i class="fa-solid fa-trash"></i></a></td> -->
+        <td><a href="<?=URL ?>users/edit"><i class="fa-solid fa-edit"></i></a></td>
+        <td><a href="<?=URL ?>users/delete"><i class="fa-solid fa-trash"></i></a></td>
 
       </tr>
     <?php endforeach; ?>
