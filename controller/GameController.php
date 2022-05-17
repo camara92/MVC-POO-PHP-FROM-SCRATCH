@@ -14,6 +14,9 @@ class GameController {
         $games = $this->gameManager->getGames();
         require_once "View/games.view.php";
     }
+    public function newGameForm(){
+        require_once "view/new.game.view.php";
+    }
 
 
 }
